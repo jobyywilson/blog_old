@@ -1,7 +1,7 @@
 # Site settings
 title: Joby Wilson Mathews - Full Stack Developer
 description: "My blog"
-baseurl: "/space-jekyll-template" # for test: remove string '/space-jekyll-template' to ''
+baseurl: "/blog" # for test: remove string '/space-jekyll-template' to ''
 url: "https://jobyywilson.github.io/blog/" # for test: remove string 'http://victorvoid.github.io' to '' but in production: 'https://yourusername.github.io'
 
 # User settings
