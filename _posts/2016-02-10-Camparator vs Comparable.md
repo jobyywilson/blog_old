@@ -12,7 +12,7 @@ categories:
 
 Comparable and Comparator are two interface provided by Java to sort objects using the properties of a class.
 
-<h1>Comparable</h1>
+##Comparable Interface
 
 This interface provide an ordering on the objects of each class that implements it. This ordering is called as the class's natural ordering, and the class's ```compareTo``` method is referred to as its natural comparison method.
 
