@@ -10,7 +10,6 @@ categories:
 - Learn Java 
 ---
 
-## Camparator vs Comparable
 
 
 |                          Comparable                           |                Comparator                |
