@@ -18,8 +18,8 @@ This interface provide an ordering on the objects of each class that implements 
 
 ``` public interface Comparable<T>``` 
 
-Suppose a company have list of employees and we need to sort these employees by thier id. Consider that employee have properties id, name, age and date of join.
-First we need to create a class ```Employee``` and implemnet with ```Comparable<Employee>``` then override the method ```compareTo```.
+Suppose we have a company, which have a list of employees and we need to sort these employees by thier id. Consider that employee have properties id, name, age and date of join.
+First we need to create a class ```Employee``` and implement it with ```Comparable<Employee>``` interface then override the method ```compareTo```.
 
 Employee POJO class:
 ```
@@ -72,7 +72,33 @@ public class Employee implements Comparable<Employee>{
 }
 ```
 
+ComparableExample class:
 
+```public class ComparableExample {
+
+	public static void main(String[] args) {
+        Employee[] employeeArray = new Employee[]{
+        		new Employee(23,"John",34,"26/03/2010"), 
+        		new Employee(13,"Neo",34,"29/06/2014"),
+        		new Employee(03,"Tony",34,"27/04/2015"),
+        		new Employee(21,"Stark",34,"21/08/2016"),
+        		new Employee(1,"Bruce",34,"23/07/2017")};
+
+        Arrays.sort(employeeArray);
+        Arrays.stream(employeeArray).map(emp->emp.getName()).forEach(System.out::println);
+
+	}
+
+}
+```
+Output:
+```
+Bruce
+Tony
+Neo
+Stark
+John
+```
 
 
  
