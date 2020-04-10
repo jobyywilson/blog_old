@@ -22,7 +22,7 @@ Suppose a company have list of employees and we need to sort these employees by 
 First we need to create a class ```Employee``` and implemnet with ```Comparable<Employee>``` then override the method ```compareTo```.
 
 Employee POJO class:
-'''
+```
 public class Employee implements Comparable<Employee>{
 
 	
@@ -70,7 +70,7 @@ public class Employee implements Comparable<Employee>{
 	
 	
 }
-'''
+```
 
 
 
