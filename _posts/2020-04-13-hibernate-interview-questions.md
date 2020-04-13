@@ -34,11 +34,10 @@ Example:
 
 If you are trying to load /get Empoyee object where empid=20. But assume that record is not available in database.
 
-  ```
-  Employee employee1 = session.load(Employee.class,20);  //Step-1
-  System.out.println(employee1.getEmployeeId();       //Step-2  --Output =20
-  System.out.println(employee1.getEmployeeName();       //Step-3 -->Output =ObjectNotFoundException
-  ```
+  
+  ```Employee employee1 = session.load(Employee.class,20);  //Step-1```
+  ```System.out.println(employee1.getEmployeeId();       //Step-2  --Output =20```
+  ```System.out.println(employee1.getEmployeeName();       //Step-3 -->Output =ObjectNotFoundException ```
   
 If you use load in step-1 hibernate won't fire any select query to fetch employee record from the database at this moment. At this point hibernate gives a dummy object (Proxy). This dummy object doesnt contain anything. It is new Employee(20). you can verify this in step-2 it will print 20. but in step-3 we are trying to find employee information. so at this time hibernate fires a sql query to fetch Empoyee objectr. If it is not found in DB.throws ObjectNotFoundException.
 
