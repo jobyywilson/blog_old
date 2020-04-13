@@ -2,7 +2,7 @@
 layout: post
 title:  "Hibernate interview questions"
 image: ''
-date:   2016-03-12 00:06:31
+date:   2020-04-13 11:30:00 +0800
 tags:
 - mongodb
 description: ''
