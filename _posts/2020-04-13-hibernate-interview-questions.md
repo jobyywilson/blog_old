@@ -67,6 +67,11 @@ The first-level cache is the Session cache and is a mandatory cache through whic
 
 Second level cache is an optional cache and first-level cache will always be consulted before any attempt is made to locate an object in the second-level cache. The second-level cache can be configured on a per-class and per-collection basis and mainly responsible for caching objects across sessions.
 
+EHCache (org.hibernate.cache.EhCacheProvider)
+OSCache (org.hibernate.cache.OSCacheProvider)
+SwarmCache (org.hibernate.cache.SwarmCacheProvider)
+JBoss TreeCache (org.hibernate.cache.TreeCacheProvider)
+
 * Query level cache
 
 Hibernate also implements a cache for query resultsets that integrates closely with the second-level cache.
