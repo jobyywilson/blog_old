@@ -24,13 +24,38 @@ Java Persistence API (JPA) is a Java specification that provides certain functio
 
 Following are the key components/objects of Hibernate −
 
-* **Configuration** − Represents a configuration or properties file required by the Hibernate.
-* **SessionFactory** − Configures Hibernate for the application using the supplied configuration file and allows for a Session object to be instantiated.
-* **Session** − Used to get a physical connection with a database.
-* **Transaction** − Represents a unit of work with the database and most of the RDBMS supports transaction functionality.
-* **Query** − Uses SQL or Hibernate Query Language (HQL) string to retrieve data from the database and create objects.
+* **Configuration** 
+
+An instance of Configuration allows the application to specify properties and mapping documents to be used when creating a SessionFactory. Usually an application will create a single Configuration, build a single instance of SessionFactory and then instantiate Sessions in threads servicing client requests. The Configuration is meant only as an initialization-time object. SessionFactorys are immutable and do not retain any association back to the Configuration.
+
+A new Configuration will use the properties specified in hibernate.properties by default.
+
+* **SessionFactory** − 
+
+Configuration object is used to create a SessionFactory object which in turn configures Hibernate for the application using the supplied configuration file and allows for a Session object to be instantiated. The SessionFactory is a thread safe object and used by all the threads of an application.
+
+The SessionFactory is a heavyweight object; it is usually created during application start up and kept for later use. You would need one SessionFactory object per database using a separate configuration file. So, if you are using multiple databases, then you would have to create multiple SessionFactory objects.
+
+
+* **Session** 
+
+A Session is used to get a physical connection with a database. The Session object is lightweight and designed to be instantiated each time an interaction is needed with the database. Persistent objects are saved and retrieved through a Session object.
+
+The session objects should not be kept open for a long time because they are not usually thread safe and they should be created and destroyed them as needed.
+
+* **Transaction** 
+
+A Transaction represents a unit of work with the database and most of the RDBMS supports transaction functionality. Transactions in Hibernate are handled by an underlying transaction manager and transaction (from JDBC or JTA).
+
+This is an optional object and Hibernate applications may choose not to use this interface, instead managing transactions in their own application code.
+
+* **Query** 
+
+Query objects use SQL or Hibernate Query Language (HQL) string to retrieve data from the database and create objects. A Query instance is used to bind query parameters, limit the number of results returned by the query, and finally to execute the query.
+
 * **Criteria** − Used to create and execute object oriented criteria queries to retrieve objects.
 
+Criteria objects are used to create and execute object oriented criteria queries to retrieve objects.
 
 **4) get() vs load() method?**
 
