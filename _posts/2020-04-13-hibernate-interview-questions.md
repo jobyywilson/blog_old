@@ -59,7 +59,7 @@ Criteria objects are used to create and execute object oriented criteria queries
 
 **4) get() vs load() method?**
 
-
+<div width="50%">
 | Sl No |          Key           |                                                        get()                                                         |                                   load()                                   |
 |-------|------------------------|----------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------|
 |     1 | Basic                  | It  is used to fetch data from the database for the given identifier                                                 | It  is also used to fetch data from the database for the given identifier  |
@@ -68,6 +68,7 @@ Criteria objects are used to create and execute object oriented criteria queries
 |     4 | Performance            | It is slower than load() because it return fully initialized object which impact the performance of the application  | It is slightly faster.                                                     |
 |     5 | Use Case               | If you are not sure that object exist then use get() method                                                          | If you are sure that object exist then use load() method                   |
 
+</div>
 Example:
 
 If you are trying to load /get Empoyee object where empid=20. But assume that record is not available in database.
