@@ -4,7 +4,7 @@ title:  "Hibernate interview questions"
 image: ''
 date:   2020-04-13 11:30:00 +0800
 tags:
-- mongodb
+- hibernate
 description: ''
 categories:
 - Learn Hibernate
