@@ -57,7 +57,19 @@ Query objects use SQL or Hibernate Query Language (HQL) string to retrieve data 
 
 Criteria objects are used to create and execute object oriented criteria queries to retrieve objects.
 
-**4) What are different types of caches available in Hibernate?**
+**4) What is difference between getCurrentSession() and openSession() in Hibernate? **
+
+
+|       Parameter     |                                openSession                                 |                                                    getCurrentSession                                                     |
+|---------------------|----------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
+|   Session  creation | Always open new session                                                    | It opens a new Session if not exists , else use same session which is in current hibernate context.                      |
+|   Session close     | Need to close the session object once all the database operations are done | No need to close the session. Once the session factory is closed, this session object is closed.                         |
+|   Flush and close   | Need to explicity flush and close session objects                          | No need to flush and close sessions , since it is automatically taken by hibernate internally.                           |
+|   Performance       | In single threaded environment , it is slower than getCurrentSession       | In single threaded environment , it is faster than openSession                                                           |
+|   Configuration     | No need to configure any property to call this method                      | Need to configure additional property:</br> <property name=""hibernate.current_session_context_class"">thread</property> |
+
+
+**5) What are different types of caches available in Hibernate?**
 
 * First-level cache
 
