@@ -59,7 +59,7 @@ Criteria objects are used to create and execute object oriented criteria queries
 
 **4) get() vs load() method?**
 
-<div style="width=50%">
+<div style="width:50%;background:"blue">
   
 | Sl No |          Key           |                                                        get()                                                         |                                   load()                                   |
 |-------|------------------------|----------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------|
