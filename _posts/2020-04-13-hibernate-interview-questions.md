@@ -11,15 +11,28 @@ categories:
 ---
 
 
-<b>1) What is hibernate ?</b>
+**1) What is hibernate ?**
 
 Hibernate is a Java framework that simplifies the development of Java application to interact with the database. It is an open source, lightweight, ORM (Object Relational Mapping) tool. Hibernate implements the specifications of JPA (Java Persistence API) for data persistence.
 
-<b>2) What is JPA?</b>
+**2) What is JPA?**
 
 Java Persistence API (JPA) is a Java specification that provides certain functionality and standard to ORM tools. The javax.persistence package contains the JPA classes and interfaces.
 
-<b>2) get() vs load() method?</b>
+
+**3) What are the key components/objects of hibernate?**
+
+Following are the key components/objects of Hibernate −
+
+* **Configuration** − Represents a configuration or properties file required by the Hibernate.
+* **SessionFactory** − Configures Hibernate for the application using the supplied configuration file and allows for a Session object to be instantiated.
+* **Session** − Used to get a physical connection with a database.
+* **Transaction** − Represents a unit of work with the database and most of the RDBMS supports transaction functionality.
+* **Query** − Uses SQL or Hibernate Query Language (HQL) string to retrieve data from the database and create objects.
+* **Criteria** − Used to create and execute object oriented criteria queries to retrieve objects.
+
+
+**4) get() vs load() method?**
 
 
 | Sl No |          Key           |                                                        get()                                                         |                                   load()                                   |
