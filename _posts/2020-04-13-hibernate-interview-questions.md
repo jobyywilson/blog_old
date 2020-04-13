@@ -57,7 +57,23 @@ Query objects use SQL or Hibernate Query Language (HQL) string to retrieve data 
 
 Criteria objects are used to create and execute object oriented criteria queries to retrieve objects.
 
-**4) get() vs load() method?**
+**4) What are different types of caches available in Hibernate?**
+
+* First-level cache
+
+The first-level cache is the Session cache and is a mandatory cache through which all requests must pass. The Session object keeps an object under its own power before committing it to the database.
+
+* Second-level cache
+
+Second level cache is an optional cache and first-level cache will always be consulted before any attempt is made to locate an object in the second-level cache. The second-level cache can be configured on a per-class and per-collection basis and mainly responsible for caching objects across sessions.
+
+* Query level cache
+
+Hibernate also implements a cache for query resultsets that integrates closely with the second-level cache.
+
+This is an optional feature and requires two additional physical cache regions that hold the cached query results and the timestamps when a table was last updated. This is only useful for queries that are run frequently with the same parameters.
+
+**5) get() vs load() method?**
 
   
 | Sl No |          Key           |                                                        get()                                                         |                                   load()                                   |
