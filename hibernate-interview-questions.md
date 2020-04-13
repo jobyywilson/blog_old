@@ -41,3 +41,7 @@ If you are trying to load /get Empoyee object where empid=20. But assume that re
   ```
   
 If you use load in step-1 hibernate won't fire any select query to fetch employee record from the database at this moment. At this point hibernate gives a dummy object (Proxy). This dummy object doesnt contain anything. It is new Employee(20). you can verify this in step-2 it will print 20. but in step-3 we are trying to find employee information. so at this time hibernate fires a sql query to fetch Empoyee objectr. If it is not found in DB.throws ObjectNotFoundException.
+
+  ```Employee employee2 = session.get(Employee.class,20);  //Step-4  ```
+  
+For session.get() hibernate fires a sql query to fetch the data from db. so in our case id=20 not exists in DB. so it will return null.
