@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "Comparator and Comparable"
+title:  "Angular Components"
 image: ''
-date:   2020-04-10 11:30:00 +0800
+date:   2020-05-02 11:30:00 +0800
 tags:
-- java
+- angular
 description: ''
 categories:
-- Learn Java 
+- Learn Angular 
 ---
 
 Comparable and Comparator are two interface provided by Java to sort objects using the properties of a class.
