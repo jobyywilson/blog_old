@@ -14,7 +14,7 @@ categories:
 
 Angular is built upon components. The starting point of an Angular app is the bootstrapping of the initial parent component, much like the HTML DOM tree that starts with an HTML element and then branches down from there.
 
-![Component Tree](/assets/img/angular/component-tree.JPG)
+<img src="{{ site.baseurl }}/assets/img/angular/component-tree.JPG">
 
 Angular runs on a component tree model. After Angular loads the first component with the bootstrap call, it then looks within that component's HTML view and sees if it has any nested components.
 
