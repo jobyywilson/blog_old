@@ -18,10 +18,10 @@ Angular is built upon components. The starting point of an Angular app is the bo
 
 Angular runs on a component tree model. After Angular loads the first component with the bootstrap call, it then looks within that component's HTML view and sees if it has any nested components.
 
-  <section>
-    <component-1></component-1>
-    <component-2></component-2>
-  </section>
+    <section>
+      <component-1></component-1>
+      <component-2></component-2>
+    </section>
 
 
 If so, Angular finds matches and runs the appropriate component code on those. This repeats for each component down the tree. A component in Angular is used to render a portion of HTML and provide functionality to that portion. It does this through a Component class in which you can define application logic for the component. 
